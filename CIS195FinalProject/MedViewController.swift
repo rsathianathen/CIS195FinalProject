@@ -9,6 +9,8 @@ import UIKit
 
 class MedViewController: UIViewController {
     
+    @IBOutlet weak var searchBar: UISearchBar!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
