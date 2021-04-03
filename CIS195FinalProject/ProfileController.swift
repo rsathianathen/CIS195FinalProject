@@ -14,6 +14,7 @@ protocol AddProfileDelegate: class {
 class ProfileController: UIViewController, UITextFieldDelegate {
 
     weak var delegate: AddProfileDelegate?
+    
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var emailAddress: UITextField!
     @IBOutlet weak var phoneNumber: UITextField!
@@ -36,6 +37,7 @@ class ProfileController: UIViewController, UITextFieldDelegate {
         emailAddress.delegate = self
         phoneNumber.delegate = self
         age.delegate = self
+        name.text = Name
         // Do any additional setup after loading the view.
     }
     
@@ -45,6 +47,27 @@ class ProfileController: UIViewController, UITextFieldDelegate {
         emailAddress.resignFirstResponder()
         phoneNumber.resignFirstResponder()
         return true
+    }
+    
+    
+    @IBAction func saveInfo(_ sender: Any) {
+        if let updatedProfile = updateProfile() {
+            self.delegate?.didCreate(updatedProfile)
+        }
+        
+        
+    }
+    
+    func updateProfile() -> Profile? {
+        Name = name.text ?? ""
+        EmailAddress = emailAddress.text ?? ""
+        PhoneNumber = phoneNumber.text ?? ""
+        Age = age.text ?? ""
+        
+        let updateProfile: Profile? = Profile(name: Name,  email: EmailAddress, number: PhoneNumber, age: Age)
+        
+        return updateProfile
+   
     }
     
     

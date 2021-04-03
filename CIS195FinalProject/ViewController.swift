@@ -9,8 +9,14 @@ import UIKit
 
 class ViewController: UITableViewController, AddProfileDelegate {
     
+    var savedProfile: Profile?
+
+    
     func didCreate(_ profile: Profile) {
         dismiss(animated: true, completion: nil)
+        savedProfile = profile
+        print ("Hello")
+        self.tableView.reloadData()
     }
     
 
@@ -57,10 +63,11 @@ class ViewController: UITableViewController, AddProfileDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "profile" {
-            if let navVC = segue.destination as? UINavigationController{
-                if let apVC = navVC.topViewController as? ProfileController {
-                    apVC.delegate = self
-                }
+            if let vc = segue.destination as? ProfileController {
+                vc.Name = savedProfile?.Name ?? ""
+                vc.EmailAddress = savedProfile?.emailAddress ?? ""
+                vc.Age = savedProfile?.age ?? ""
+                vc.PhoneNumber = savedProfile?.phoneNumber ?? ""
             }
         }
         

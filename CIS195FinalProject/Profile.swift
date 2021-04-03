@@ -8,14 +8,13 @@
 import UIKit
 struct Profile {
     
-    var profilePic: UIImage?
     var Name: String
     var emailAddress: String
     var phoneNumber: String
     var age: String
     
-    init (picture: UIImage?, name: String, last: String,  email: String, number: String, age: String){
-        self.profilePic = picture
+    init (name: String, email: String, number: String, age: String) {
+
         self.Name = name
         self.emailAddress = email
         self.phoneNumber = number

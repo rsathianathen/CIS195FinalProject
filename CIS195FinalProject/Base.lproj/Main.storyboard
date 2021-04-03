@@ -54,13 +54,67 @@
                     </navigationItem>
                     <connections>
                         <segue destination="Nzn-7Q-6AI" kind="presentation" identifier="addMedication" id="wak-Or-6r2"/>
-                        <segue destination="se5-Os-FkV" kind="presentation" identifier="profile" id="oiM-kZ-8ls"/>
                         <segue destination="jxl-wb-28Q" kind="show" identifier="medication" id="F1g-Kg-n5G"/>
+                        <segue destination="bqe-f0-mBD" kind="show" identifier="profile" id="l8g-sp-QB5"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kK9-ZI-2PE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3049.275362318841" y="78.348214285714278"/>
+            <point key="canvasLocation" x="3048" y="78"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="AML-2H-pmh">
+            <objects>
+                <viewController id="bqe-f0-mBD" customClass="ProfileController" customModule="CIS195FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u5l-9U-bLv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hgf-cU-I9T">
+                                <rect key="frame" x="60" y="431" width="295" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dKA-Hy-d8x">
+                                <rect key="frame" x="60" y="517" width="295" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BCq-sq-ldL">
+                                <rect key="frame" x="60" y="583" width="295" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="acP-8u-GCZ">
+                                <rect key="frame" x="60" y="656" width="295" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="e1k-s8-O3F"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="YCf-x1-KDj">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="7fa-Gm-fYN">
+                            <connections>
+                                <action selector="saveInfo:" destination="bqe-f0-mBD" id="fP3-OA-ldz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="age" destination="acP-8u-GCZ" id="yLP-op-9N8"/>
+                        <outlet property="emailAddress" destination="dKA-Hy-d8x" id="GaZ-Qf-bjH"/>
+                        <outlet property="name" destination="Hgf-cU-I9T" id="zAj-Po-gQg"/>
+                        <outlet property="phoneNumber" destination="BCq-sq-ldL" id="a60-Yb-pEv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nsd-T5-7nH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3992.753623188406" y="-124.55357142857142"/>
         </scene>
         <!--newMedication-->
         <scene sceneID="Dj8-AO-ZdI">
@@ -69,66 +123,21 @@
                     <view key="view" contentMode="scaleToFill" id="8mh-6s-Kev">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yaF-Z8-rGs">
+                                <rect key="frame" x="0.0" y="83" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cBp-vo-xKO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="tVM-29-MPk"/>
+                    <navigationItem key="navigationItem" title="Add Medication" id="tVM-29-MPk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CRg-I6-cP1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4902.898550724638" y="568.52678571428567"/>
-        </scene>
-        <!--ProfileDetails-->
-        <scene sceneID="FW4-qf-BOk">
-            <objects>
-                <viewController title="ProfileDetails" id="HG2-F4-crc" customClass="ProfileController" customModule="CIS195FinalProject" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hbS-Bp-i29">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="paperclip" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="c9C-ra-KfD">
-                                <rect key="frame" x="87" y="169" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gxM-1N-Fc9">
-                                <rect key="frame" x="87" y="476" width="240" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="email"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9r2-NV-HOd">
-                                <rect key="frame" x="87" y="542" width="240" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done" textContentType="tel"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BW3-CK-Jhq">
-                                <rect key="frame" x="87" y="615" width="145" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zHi-iL-Gah">
-                                <rect key="frame" x="87" y="404" width="240" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="name"/>
-                            </textField>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="rV7-t9-5Yp"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="a3K-09-PEY"/>
-                    <connections>
-                        <outlet property="age" destination="BW3-CK-Jhq" id="WCq-Wn-uDU"/>
-                        <outlet property="emailAddress" destination="gxM-1N-Fc9" id="NZU-h4-yOL"/>
-                        <outlet property="name" destination="zHi-iL-Gah" id="Osg-sG-YL9"/>
-                        <outlet property="phoneNumber" destination="9r2-NV-HOd" id="mDC-sE-t4b"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HnY-b8-eFe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4902.898550724638" y="-208.25892857142856"/>
         </scene>
         <!--Medication's Page-->
         <scene sceneID="oX3-Hd-2IF">
@@ -148,25 +157,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RWK-gw-fmy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2139.130434782609" y="77.678571428571431"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Y6K-Nj-KGR">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="se5-Os-FkV" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="L7m-H8-7L3"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dNS-eK-sD7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="HG2-F4-crc" kind="relationship" relationship="rootViewController" id="gVN-Bg-uKq"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eAC-Af-Vo8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3992.753623188406" y="-208.25892857142856"/>
         </scene>
         <!--Med View Controller-->
         <scene sceneID="0Vr-Ad-IIN">
@@ -204,7 +194,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="paperclip" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
