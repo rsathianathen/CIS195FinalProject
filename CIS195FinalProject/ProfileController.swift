@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileController: UIViewController {
+class ProfileController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var emailAddress: UITextField!
@@ -27,8 +27,23 @@ class ProfileController: UIViewController {
         emailAddress.placeholder = "Email Address"
         phoneNumber.placeholder = "Phone Number"
         age.placeholder = "Age"
+        name.delegate = self
+        emailAddress.delegate = self
+        phoneNumber.delegate = self
+        age.delegate = self
         // Do any additional setup after loading the view.
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        age.resignFirstResponder()
+        name.resignFirstResponder()
+        emailAddress.resignFirstResponder()
+        phoneNumber.resignFirstResponder()
+        return true
+    }
+    
+    
 
+   
     
 }
