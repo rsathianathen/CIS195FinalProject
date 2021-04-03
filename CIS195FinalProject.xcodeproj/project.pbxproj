@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		236D1A7A2617A31900A87F9B /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236D1A792617A31900A87F9B /* ProfileController.swift */; };
 		239E8E972616E38B00AFAF31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239E8E962616E38B00AFAF31 /* AppDelegate.swift */; };
 		239E8E992616E38B00AFAF31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239E8E982616E38B00AFAF31 /* SceneDelegate.swift */; };
 		239E8E9B2616E38B00AFAF31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239E8E9A2616E38B00AFAF31 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		236D1A792617A31900A87F9B /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		239E8E932616E38B00AFAF31 /* CIS195FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CIS195FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		239E8E962616E38B00AFAF31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		239E8E982616E38B00AFAF31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				239E8E9F2616E38E00AFAF31 /* Assets.xcassets */,
 				239E8EA12616E38E00AFAF31 /* LaunchScreen.storyboard */,
 				239E8EA42616E38E00AFAF31 /* Info.plist */,
+				236D1A792617A31900A87F9B /* ProfileController.swift */,
 			);
 			path = CIS195FinalProject;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				239E8E9B2616E38B00AFAF31 /* ViewController.swift in Sources */,
 				239E8E972616E38B00AFAF31 /* AppDelegate.swift in Sources */,
 				239E8E992616E38B00AFAF31 /* SceneDelegate.swift in Sources */,
+				236D1A7A2617A31900A87F9B /* ProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
