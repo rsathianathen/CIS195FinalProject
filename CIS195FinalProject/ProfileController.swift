@@ -14,9 +14,15 @@ class ProfileController: UIViewController {
     @IBOutlet weak var phoneNumber: UITextField!
     @IBOutlet weak var age: UITextField!
     
+    var Name = ""
+    var EmailAddress = ""
+    var PhoneNumber = ""
+    var Age = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Medications"
         name.placeholder = "Name"
         emailAddress.placeholder = "Email Address"
         phoneNumber.placeholder = "Phone Number"

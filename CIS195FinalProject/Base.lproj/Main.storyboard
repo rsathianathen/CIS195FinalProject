@@ -3,15 +3,16 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Medications-->
         <scene sceneID="iJl-VA-W5E">
             <objects>
-                <tableViewController id="UeA-Ps-2eT" sceneMemberID="viewController">
+                <tableViewController id="UeA-Ps-2eT" customClass="ViewController" customModule="CIS195FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="849-qa-9y7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,22 +32,48 @@
                             <outlet property="delegate" destination="UeA-Ps-2eT" id="oXI-tx-QJj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="r9w-7Y-hlx">
-                        <barButtonItem key="leftBarButtonItem" title="Profile" id="yAb-0G-xRL"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xF2-TG-0uu"/>
+                    <navigationItem key="navigationItem" title="Medications" id="r9w-7Y-hlx">
+                        <barButtonItem key="leftBarButtonItem" title="Profile" id="VRs-Vo-Ifq">
+                            <connections>
+                                <action selector="openProfile:" destination="UeA-Ps-2eT" id="CHj-71-lVN"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3kU-GQ-VbY">
+                            <color key="tintColor" name="AccentColor"/>
+                            <connections>
+                                <action selector="addMed:" destination="UeA-Ps-2eT" id="51E-de-pkZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="HG2-F4-crc" kind="presentation" identifier="profile" id="tWS-Kc-fpD"/>
+                        <segue destination="se5-Os-FkV" kind="presentation" identifier="profile" id="ecM-Je-ysu"/>
+                        <segue destination="Nzn-7Q-6AI" kind="presentation" identifier="addMedication" id="wak-Or-6r2"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kK9-ZI-2PE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3049.275362318841" y="78.348214285714278"/>
         </scene>
-        <!--Profile Controller-->
+        <!--newMedication-->
+        <scene sceneID="Dj8-AO-ZdI">
+            <objects>
+                <viewController title="newMedication" id="b5j-zZ-gno" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8mh-6s-Kev">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cBp-vo-xKO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tVM-29-MPk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CRg-I6-cP1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4902.898550724638" y="568.52678571428567"/>
+        </scene>
+        <!--ProfileDetails-->
         <scene sceneID="FW4-qf-BOk">
             <objects>
-                <viewController id="HG2-F4-crc" customClass="ProfileController" customModule="CIS195FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ProfileDetails" id="HG2-F4-crc" customClass="ProfileController" customModule="CIS195FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hbS-Bp-i29">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,6 +110,7 @@
                         <viewLayoutGuide key="safeArea" id="rV7-t9-5Yp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="a3K-09-PEY"/>
                     <connections>
                         <outlet property="age" destination="BW3-CK-Jhq" id="WCq-Wn-uDU"/>
                         <outlet property="emailAddress" destination="gxM-1N-Fc9" id="NZU-h4-yOL"/>
@@ -92,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HnY-b8-eFe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3992.753623188406" y="-208.25892857142856"/>
+            <point key="canvasLocation" x="4902.898550724638" y="-208.25892857142856"/>
         </scene>
         <!--Medication's Page-->
         <scene sceneID="oX3-Hd-2IF">
@@ -113,8 +141,47 @@
             </objects>
             <point key="canvasLocation" x="2139.130434782609" y="77.678571428571431"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Y6K-Nj-KGR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="se5-Os-FkV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dNS-eK-sD7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HG2-F4-crc" kind="relationship" relationship="rootViewController" id="gVN-Bg-uKq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eAC-Af-Vo8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3992.753623188406" y="-208.25892857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RGN-04-9A1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nzn-7Q-6AI" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eGO-Qq-os2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="b5j-zZ-gno" kind="relationship" relationship="rootViewController" id="HJp-Et-vvz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AOF-5L-9qO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3992.753623188406" y="568.52678571428567"/>
+        </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
