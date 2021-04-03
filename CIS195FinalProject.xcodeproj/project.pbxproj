@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		236D1A7A2617A31900A87F9B /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236D1A792617A31900A87F9B /* ProfileController.swift */; };
+		236D1A852618177D00A87F9B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236D1A842618177D00A87F9B /* Profile.swift */; };
+		236D1A8A26181D8F00A87F9B /* MedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 236D1A8926181D8F00A87F9B /* MedViewController.swift */; };
 		239E8E972616E38B00AFAF31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239E8E962616E38B00AFAF31 /* AppDelegate.swift */; };
 		239E8E992616E38B00AFAF31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239E8E982616E38B00AFAF31 /* SceneDelegate.swift */; };
 		239E8E9B2616E38B00AFAF31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239E8E9A2616E38B00AFAF31 /* ViewController.swift */; };
@@ -37,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		236D1A792617A31900A87F9B /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		236D1A842618177D00A87F9B /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		236D1A8926181D8F00A87F9B /* MedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedViewController.swift; sourceTree = "<group>"; };
 		239E8E932616E38B00AFAF31 /* CIS195FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CIS195FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		239E8E962616E38B00AFAF31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		239E8E982616E38B00AFAF31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 				239E8EA12616E38E00AFAF31 /* LaunchScreen.storyboard */,
 				239E8EA42616E38E00AFAF31 /* Info.plist */,
 				236D1A792617A31900A87F9B /* ProfileController.swift */,
+				236D1A842618177D00A87F9B /* Profile.swift */,
+				236D1A8926181D8F00A87F9B /* MedViewController.swift */,
 			);
 			path = CIS195FinalProject;
 			sourceTree = "<group>";
@@ -262,7 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				239E8E9B2616E38B00AFAF31 /* ViewController.swift in Sources */,
+				236D1A852618177D00A87F9B /* Profile.swift in Sources */,
 				239E8E972616E38B00AFAF31 /* AppDelegate.swift in Sources */,
+				236D1A8A26181D8F00A87F9B /* MedViewController.swift in Sources */,
 				239E8E992616E38B00AFAF31 /* SceneDelegate.swift in Sources */,
 				236D1A7A2617A31900A87F9B /* ProfileController.swift in Sources */,
 			);

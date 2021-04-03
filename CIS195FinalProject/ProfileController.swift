@@ -7,8 +7,13 @@
 
 import UIKit
 
+protocol AddProfileDelegate: class {
+    func didCreate(_ profile: Profile)
+}
+
 class ProfileController: UIViewController, UITextFieldDelegate {
 
+    weak var delegate: AddProfileDelegate?
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var emailAddress: UITextField!
     @IBOutlet weak var phoneNumber: UITextField!
@@ -41,6 +46,8 @@ class ProfileController: UIViewController, UITextFieldDelegate {
         phoneNumber.resignFirstResponder()
         return true
     }
+    
+    
     
     
 

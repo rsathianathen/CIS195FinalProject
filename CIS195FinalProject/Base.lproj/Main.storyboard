@@ -23,6 +23,15 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oaa-s2-Jhv" id="vq7-8u-cDi">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aspirin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoR-aG-hHS">
+                                            <rect key="frame" x="138" y="11" width="53" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -44,8 +53,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="se5-Os-FkV" kind="presentation" identifier="profile" id="ecM-Je-ysu"/>
                         <segue destination="Nzn-7Q-6AI" kind="presentation" identifier="addMedication" id="wak-Or-6r2"/>
+                        <segue destination="se5-Os-FkV" kind="presentation" identifier="profile" id="oiM-kZ-8ls"/>
+                        <segue destination="jxl-wb-28Q" kind="show" identifier="medication" id="F1g-Kg-n5G"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kK9-ZI-2PE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -144,6 +154,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="se5-Os-FkV" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="L7m-H8-7L3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dNS-eK-sD7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -156,6 +167,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAC-Af-Vo8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3992.753623188406" y="-208.25892857142856"/>
+        </scene>
+        <!--Med View Controller-->
+        <scene sceneID="0Vr-Ad-IIN">
+            <objects>
+                <viewController id="jxl-wb-28Q" customClass="MedViewController" customModule="CIS195FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g2s-bA-cPJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cMf-8c-alb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sge-mH-7oD"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gtk-8p-BEm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3049" y="891"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RGN-04-9A1">

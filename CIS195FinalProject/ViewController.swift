@@ -7,7 +7,12 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class ViewController: UITableViewController, AddProfileDelegate {
+    
+    func didCreate(_ profile: Profile) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 
         
     override func viewDidLoad() {
@@ -45,11 +50,19 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        self.performSegue(withIdentifier:"medication", sender: self)
        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "profile" {
+            if let navVC = segue.destination as? UINavigationController{
+                if let apVC = navVC.topViewController as? ProfileController {
+                    apVC.delegate = self
+                }
+            }
+        }
         
     }
     
