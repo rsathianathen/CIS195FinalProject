@@ -71,29 +71,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hgf-cU-I9T">
-                                <rect key="frame" x="60" y="431" width="295" height="34"/>
+                                <rect key="frame" x="59.292180312650544" y="405" width="294.99999999999955" height="45.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dKA-Hy-d8x">
-                                <rect key="frame" x="60" y="517" width="295" height="34"/>
+                                <rect key="frame" x="60" y="591" width="295" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BCq-sq-ldL">
-                                <rect key="frame" x="60" y="583" width="295" height="34"/>
+                                <rect key="frame" x="60" y="651" width="295" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="acP-8u-GCZ">
-                                <rect key="frame" x="60" y="656" width="295" height="34"/>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zez-zU-9Bx">
+                                <rect key="frame" x="227" y="533" width="128" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRb-WZ-QZT">
+                                <rect key="frame" x="60" y="541" width="124" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                            </textField>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="e1k-s8-O3F"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -106,9 +111,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="age" destination="acP-8u-GCZ" id="yLP-op-9N8"/>
+                        <outlet property="ageSelector" destination="Zez-zU-9Bx" id="S1L-Vx-mxV"/>
                         <outlet property="emailAddress" destination="dKA-Hy-d8x" id="GaZ-Qf-bjH"/>
                         <outlet property="name" destination="Hgf-cU-I9T" id="zAj-Po-gQg"/>
+                        <outlet property="numberAge" destination="wRb-WZ-QZT" id="Vrg-1E-dIV"/>
                         <outlet property="phoneNumber" destination="BCq-sq-ldL" id="a60-Yb-pEv"/>
                     </connections>
                 </viewController>

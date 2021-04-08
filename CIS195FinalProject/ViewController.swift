@@ -15,7 +15,6 @@ class ViewController: UITableViewController, AddProfileDelegate {
     func didCreate(_ profile: Profile) {
         dismiss(animated: true, completion: nil)
         savedProfile = profile
-        print ("goodbye")
         self.tableView.reloadData()
     }
     
