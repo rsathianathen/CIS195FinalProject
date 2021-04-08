@@ -28,9 +28,8 @@ class AddMedicationController: UIViewController, UISearchBarDelegate, UITableVie
         var currentResults = [String]()
         for med in medicationsList {
             print (searchBar.text!)
-            if med.contains(searchBar.text!){
+            if med.lowercased().contains(searchBar.text!.lowercased()){
                 currentResults.append(med)
-                print ("Hello")
             }
         }
         
@@ -43,7 +42,21 @@ class AddMedicationController: UIViewController, UISearchBarDelegate, UITableVie
         if searchText == "" {
             self.searching = false
             self.medications.reloadData()
+        } else {
+            var currentResults = [String]()
+            for med in medicationsList {
+                print (searchBar.text!)
+                if med.lowercased().contains(searchBar.text!.lowercased()){
+                    currentResults.append(med)
+                }
+            }
+            
+            filteredResults = currentResults
+            searching = true
+            self.medications.reloadData()
         }
+        
+        
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
