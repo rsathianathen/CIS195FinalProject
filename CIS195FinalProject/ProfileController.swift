@@ -34,7 +34,9 @@ class ProfileController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Medications"
+        navigationItem.title = "Profile Info"
+        self.navigationController?.navigationBar.tintColor = UIColor.purple
+        navigationItem.rightBarButtonItem?.tintColor = UIColor.purple
         name.placeholder = "Name"
         emailAddress.placeholder = "Email Address"
         phoneNumber.placeholder = "Phone Number"
@@ -42,6 +44,9 @@ class ProfileController: UIViewController, UITextFieldDelegate {
         emailAddress.delegate = self
         phoneNumber.delegate = self
         name.text = Name
+        phoneNumber.text = PhoneNumber
+        emailAddress.text = EmailAddress
+        
         if Age == "" {
             numberAge.text = "Select Age"
         } else {

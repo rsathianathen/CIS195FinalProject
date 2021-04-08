@@ -23,6 +23,8 @@ class ViewController: UITableViewController, AddProfileDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         navigationItem.title = "Medications"
+        navigationItem.rightBarButtonItem?.tintColor = UIColor.purple
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.purple
     }
     
    

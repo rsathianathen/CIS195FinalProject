@@ -22,6 +22,7 @@ class AddMedicationController: UIViewController, UISearchBarDelegate, UITableVie
         searchBar.delegate = self
         medications.delegate = self
         medications.dataSource = self
+        navigationItem.leftBarButtonItem?.tintColor = UIColor.purple
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

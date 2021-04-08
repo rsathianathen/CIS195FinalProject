@@ -16,6 +16,9 @@ class MedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = medName
+        self.navigationController?.navigationBar.tintColor = UIColor.purple
+        navigationItem.rightBarButtonItem?.tintColor = UIColor.purple
+
         
     }
 }
