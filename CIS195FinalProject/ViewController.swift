@@ -67,6 +67,7 @@ class ViewController: UITableViewController, AddProfileDelegate {
                 vc.EmailAddress = savedProfile?.emailAddress ?? ""
                 vc.Age = savedProfile?.age ?? ""
                 vc.PhoneNumber = savedProfile?.phoneNumber ?? ""
+                vc.Gender = savedProfile?.gender ?? ""
                 vc.delegate = self
             }
         }

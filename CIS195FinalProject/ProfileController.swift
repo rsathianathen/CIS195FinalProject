@@ -15,17 +15,21 @@ class ProfileController: UIViewController, UITextFieldDelegate {
 
     weak var delegate: AddProfileDelegate?
     
-    private let ages = Array(16...99)
+    private let ages = Array(0...99)
+    private let genders = ["Select Gender", "Female", "Male", "Nonbinary"]
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var emailAddress: UITextField!
     @IBOutlet weak var phoneNumber: UITextField!
     @IBOutlet weak var ageSelector: UIPickerView!
     @IBOutlet weak var numberAge: UILabel!
+    @IBOutlet weak var genderSelector: UIPickerView!
+    @IBOutlet weak var gender: UILabel!
     
     var Name = ""
     var EmailAddress = ""
     var PhoneNumber = ""
     var Age = ""
+    var Gender = ""
     
     
     override func viewDidLoad() {
@@ -45,6 +49,13 @@ class ProfileController: UIViewController, UITextFieldDelegate {
         }
         ageSelector.dataSource = self
         ageSelector.delegate = self
+        genderSelector.dataSource = self
+        genderSelector.delegate = self
+        if Gender == "" {
+            gender.text = "Select Gender"
+        } else {
+            gender.text = Gender
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -69,8 +80,9 @@ class ProfileController: UIViewController, UITextFieldDelegate {
         EmailAddress = emailAddress.text ?? ""
         PhoneNumber = phoneNumber.text ?? ""
         Age = numberAge.text ?? ""
+        Gender = gender.text ?? ""
         
-        let updatedProfile: Profile? = Profile(name: Name,  email: EmailAddress, number: PhoneNumber, age: Age)
+        let updatedProfile: Profile? = Profile(name: Name,  email: EmailAddress, number: PhoneNumber, age: Age, gender: Gender)
         return updatedProfile
    
     }
@@ -83,16 +95,29 @@ extension ProfileController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return ages.count
+        if (pickerView.tag == 0){
+            return genders.count
+        } else {
+            return ages.count
+        }
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-
-        numberAge.text = "Age: " + String(ages[row])
+        if (pickerView.tag == 0){
+            gender.text = "Gender: " + String(genders[row])
+        } else {
+            numberAge.text = "Age: " + String(ages[row])
+        }
     }
     
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return String (ages[row])
+        if (pickerView.tag == 0){
+           return String(genders[row])
+        } else {
+           return String(ages[row])
+        }
     }
     
 }
