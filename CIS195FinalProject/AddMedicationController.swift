@@ -60,6 +60,11 @@ class AddMedicationController: UIViewController, UISearchBarDelegate, UITableVie
         }
     }
     
+    
+    @IBAction func cancelling(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         // TODO: How many sections? (Hint: we have 1 section and x rows)
         return 1

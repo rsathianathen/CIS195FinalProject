@@ -182,7 +182,13 @@
                         <viewLayoutGuide key="safeArea" id="cBp-vo-xKO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Medication" id="tVM-29-MPk"/>
+                    <navigationItem key="navigationItem" title="Add Medication" id="tVM-29-MPk">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="bPF-sp-Q1g">
+                            <connections>
+                                <action selector="cancelling:" destination="b5j-zZ-gno" id="3vF-IT-ObO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="medications" destination="GUK-1k-Zqi" id="gl7-5s-BR2"/>
                         <outlet property="searchBar" destination="9fT-26-zGN" id="AjQ-gj-ebB"/>
@@ -249,7 +255,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nzn-7Q-6AI" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eGO-Qq-os2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="square.and.arrow.up" catalog="system" id="eGO-Qq-os2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -264,6 +270,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
