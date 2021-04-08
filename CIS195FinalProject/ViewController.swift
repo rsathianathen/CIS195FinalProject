@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UITableViewController, AddProfileDelegate {
     
     var savedProfile: Profile?
-
+    let medicationsList = ["Aspirin", "Acetaminophen", "Imatinib", "Dasatanib"]
     
     func didCreate(_ profile: Profile) {
         dismiss(animated: true, completion: nil)
@@ -18,7 +18,6 @@ class ViewController: UITableViewController, AddProfileDelegate {
         self.tableView.reloadData()
     }
     
-
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,13 +44,16 @@ class ViewController: UITableViewController, AddProfileDelegate {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return 10
+        return medicationsList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
-            return  UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "specificMedication")
+        if let medication = cell?.viewWithTag(1) as? UILabel {
+            let medName = medicationsList[indexPath.row]
+            medication.text = medName
+        }
+            return cell ?? UITableViewCell()
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -72,10 +74,29 @@ class ViewController: UITableViewController, AddProfileDelegate {
             }
         }
         
+        if segue.identifier == "medication" {
+            if let mc = segue.destination as? MedViewController {
+                if let indexPath = tableView.indexPathForSelectedRow {
+                    let selectedRow = indexPath.row
+                    mc.medName = medicationsList[selectedRow]
+                }
+                
+            }
+        }
+        
+        if segue.identifier == "addMedication" {
+            if let navAc = segue.destination as? UINavigationController {
+                if let ac = navAc.topViewController as? AddMedicationController {
+                    ac.medicationsList = medicationsList
+                }
+                
+            }
+        }
+        
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 75.0
+        return 43.5
     }
     
     

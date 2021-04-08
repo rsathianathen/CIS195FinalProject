@@ -9,10 +9,13 @@ import UIKit
 
 class MedViewController: UIViewController {
     
-    @IBOutlet weak var searchBar: UISearchBar!
+   
+    var medName:String = ""
+    
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = medName
         
     }
 }
