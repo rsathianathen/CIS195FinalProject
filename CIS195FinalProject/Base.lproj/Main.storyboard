@@ -124,7 +124,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yaF-Z8-rGs">
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Medication Name" translatesAutoresizingMaskIntoConstraints="NO" id="yaF-Z8-rGs">
                                 <rect key="frame" x="0.0" y="83" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>

@@ -64,9 +64,8 @@ class ProfileController: UIViewController, UITextFieldDelegate {
         PhoneNumber = phoneNumber.text ?? ""
         Age = age.text ?? ""
         
-        let updateProfile: Profile? = Profile(name: Name,  email: EmailAddress, number: PhoneNumber, age: Age)
-        
-        return updateProfile
+        let updatedProfile: Profile? = Profile(name: Name,  email: EmailAddress, number: PhoneNumber, age: Age)
+        return updatedProfile
    
     }
     

@@ -15,7 +15,7 @@ class ViewController: UITableViewController, AddProfileDelegate {
     func didCreate(_ profile: Profile) {
         dismiss(animated: true, completion: nil)
         savedProfile = profile
-        print ("Hello")
+        print ("goodbye")
         self.tableView.reloadData()
     }
     
@@ -68,6 +68,7 @@ class ViewController: UITableViewController, AddProfileDelegate {
                 vc.EmailAddress = savedProfile?.emailAddress ?? ""
                 vc.Age = savedProfile?.age ?? ""
                 vc.PhoneNumber = savedProfile?.phoneNumber ?? ""
+                vc.delegate = self
             }
         }
         
