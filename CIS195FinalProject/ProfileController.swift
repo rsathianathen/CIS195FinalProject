@@ -64,20 +64,23 @@ class ProfileController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        let myAge = Int (Age.westernArabicNumeralsOnly)
+        ageSelector.selectRow((myAge ?? 0), inComponent:0, animated:true)
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         name.resignFirstResponder()
         emailAddress.resignFirstResponder()
         phoneNumber.resignFirstResponder()
         return true
     }
-    
-    
+        
     @IBAction func saveInfo(_ sender: Any) {
         if let updatedProfile = updateProfile() {
             self.delegate?.didCreate(updatedProfile)
         }
-        
-        
+ 
     }
     
     func updateProfile() -> Profile? {
@@ -125,4 +128,12 @@ extension ProfileController: UIPickerViewDelegate, UIPickerViewDataSource {
         }
     }
     
+}
+
+extension String {
+    var westernArabicNumeralsOnly: String {
+        let pattern = UnicodeScalar("0")..."9"
+        return String(unicodeScalars
+                        .compactMap { pattern ~= $0 ? Character($0) : nil })
+    }
 }

@@ -9,6 +9,22 @@ import UIKit
 
 class ViewController: UITableViewController, AddProfileDelegate {
     
+    struct APIResponse: Codable {
+        let data: [Drug]
+    }
+    
+    
+    struct Drug: Codable {
+        let name: String
+        let description: String
+        let reactions: String
+    }
+    
+    
+    
+    
+    
+    
     var savedProfile: Profile?
     let medicationsList = ["Aspirin", "Acetaminophen", "Imatinib", "Dasatanib"]
     
