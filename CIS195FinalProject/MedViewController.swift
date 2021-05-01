@@ -10,7 +10,7 @@ import UIKit
 class MedViewController: UIViewController {
     
    
-    var medName:String = ""
+    var medName: String = ""
     
    
     override func viewDidLoad() {

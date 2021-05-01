@@ -21,6 +21,7 @@
 		239E8EAE2616E38E00AFAF31 /* CIS195FinalProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239E8EAD2616E38E00AFAF31 /* CIS195FinalProjectTests.swift */; };
 		239E8EB92616E38E00AFAF31 /* CIS195FinalProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239E8EB82616E38E00AFAF31 /* CIS195FinalProjectUITests.swift */; };
 		23B1A3682638AA480004ECE1 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B1A3672638AA480004ECE1 /* SignInController.swift */; };
+		23E8A78B263DA938002963C8 /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E8A78A263DA937002963C8 /* Medication.swift */; };
 		23FCE4832630839D0022D408 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23FCE4822630839D0022D408 /* GoogleService-Info.plist */; };
 		3937CF3E00D43991BB5F602B /* Pods_CIS195FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FDCA34C9917C494F17FA9DFF /* Pods_CIS195FinalProject.framework */; };
 		5B9F488AF728837111945B48 /* Pods_CIS195FinalProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25339E211F92EE0C19F3A80C /* Pods_CIS195FinalProjectTests.framework */; };
@@ -66,6 +67,7 @@
 		239E8EB82616E38E00AFAF31 /* CIS195FinalProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIS195FinalProjectUITests.swift; sourceTree = "<group>"; };
 		239E8EBA2616E38E00AFAF31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23B1A3672638AA480004ECE1 /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
+		23E8A78A263DA937002963C8 /* Medication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = "<group>"; };
 		23FCE4822630839D0022D408 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		24D5EDCF7E2593820CB674D3 /* Pods-CIS195FinalProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CIS195FinalProjectTests.release.xcconfig"; path = "Target Support Files/Pods-CIS195FinalProjectTests/Pods-CIS195FinalProjectTests.release.xcconfig"; sourceTree = "<group>"; };
 		25339E211F92EE0C19F3A80C /* Pods_CIS195FinalProjectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CIS195FinalProjectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +143,7 @@
 				236D1A792617A31900A87F9B /* ProfileController.swift */,
 				236D1A842618177D00A87F9B /* Profile.swift */,
 				236D1A8926181D8F00A87F9B /* MedViewController.swift */,
+				23E8A78A263DA937002963C8 /* Medication.swift */,
 				237B966E261F525B0023D4EB /* AddMedicationController.swift */,
 				237B967E261FA9DC0023D4EB /* EnterMedInfoController.swift */,
 				23FCE4822630839D0022D408 /* GoogleService-Info.plist */,
@@ -464,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23E8A78B263DA938002963C8 /* Medication.swift in Sources */,
 				239E8E9B2616E38B00AFAF31 /* ViewController.swift in Sources */,
 				236D1A852618177D00A87F9B /* Profile.swift in Sources */,
 				239E8E972616E38B00AFAF31 /* AppDelegate.swift in Sources */,

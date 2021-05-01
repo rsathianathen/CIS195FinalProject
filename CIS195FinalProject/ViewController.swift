@@ -7,26 +7,24 @@
 
 import UIKit
 
-class ViewController: UITableViewController, AddProfileDelegate {
-    
-    struct APIResponse: Codable {
-        let data: [Drug]
-    }
+class ViewController: UITableViewController, AddProfileDelegate, AddMedDelegate{
     
     
-    struct Drug: Codable {
-        let name: String
-        let description: String
-        let reactions: String
-    }
-    
-    
-    
-    
-    
+   
     
     var savedProfile: Profile?
-    let medicationsList = ["Aspirin", "Acetaminophen", "Imatinib", "Dasatanib"]
+    var medicationsList = [String]()
+    
+    func didCreate(_ medication: [Medication]) {
+        dismiss(animated: true, completion: nil)
+        for med in medication {
+            if !medicationsList.contains(med.name) {
+                medicationsList.append(med.name)
+            }
+        }
+        self.tableView.reloadData()
+    }
+    
     
     func didCreate(_ profile: Profile) {
         dismiss(animated: true, completion: nil)
@@ -103,11 +101,10 @@ class ViewController: UITableViewController, AddProfileDelegate {
         }
         
         if segue.identifier == "addMedication" {
-            if let navAc = segue.destination as? UINavigationController {
+           if let navAc = segue.destination as? UINavigationController {
                 if let ac = navAc.topViewController as? AddMedicationController {
-                    ac.medicationsList = medicationsList
+                    ac.delegate = self
                 }
-                
             }
         }
         

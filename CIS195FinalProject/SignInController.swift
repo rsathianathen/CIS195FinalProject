@@ -19,6 +19,14 @@ class SignInController : UIViewController {
         return logLabel
     } ()
     
+    private let signedIn: UILabel = {
+        let logLabel = UILabel()
+        logLabel.textAlignment = .center
+        logLabel.text = "You Are Already Signed In"
+        logLabel.font = .systemFont(ofSize: 24, weight: .semibold)
+        return logLabel
+    } ()
+    
     private let emailField: UITextField = {
         let emailField = UITextField()
         emailField.placeholder = "Email Address"
@@ -60,6 +68,14 @@ class SignInController : UIViewController {
         return button
     } ()
     
+    private let viewMeds: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .systemGreen
+        button.setTitleColor(.white, for: .normal)
+        button.setTitle("View Medications", for: .normal)
+        return button
+    } ()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,11 +93,22 @@ class SignInController : UIViewController {
             passwordField.isHidden = true
             button.isHidden = true
             
-            view.addSubview(signOutButton)
-            signOutButton.frame = CGRect(x: 20, y: 150, width: view.frame.size.width-40, height: 52)
-            signOutButton.addTarget(self, action: #selector(logOutTapped), for: .touchUpInside)
+            //view.addSubview(signOutButton)
+            //signOutButton.frame = CGRect(x: 20, y: 150, width: view.frame.size.width-40, height: 52)
+            // signOutButton.addTarget(self, action: #selector(logOutTapped), for: .touchUpInside)
+            
+            view.addSubview(viewMeds)
+            view.addSubview(signedIn)
+            signedIn.frame = CGRect(x: 0, y: 300, width: view.frame.size.width, height: 80)
+            viewMeds.frame = CGRect(x: 20, y: 400, width: view.frame.size.width-40, height: 52)
+            viewMeds.addTarget(self, action: #selector(doSegue), for: .touchUpInside)
         }
+        
 
+    }
+    
+    @objc func doSegue() {
+        self.performSegue(withIdentifier: "loggedIn", sender: self)
     }
     
     @objc func logOutTapped () {

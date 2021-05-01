@@ -198,6 +198,12 @@
                                 <action selector="cancelling:" destination="b5j-zZ-gno" id="3vF-IT-ObO"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="jxM-hw-gxO">
+                            <color key="tintColor" red="0.70122340780000003" green="0.25287084129999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="done:" destination="b5j-zZ-gno" id="cWg-Lj-BaY"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="medications" destination="GUK-1k-Zqi" id="gl7-5s-BR2"/>
@@ -222,7 +228,7 @@
                     <toolbarItems>
                         <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="aZm-Bm-POK"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" id="Dyw-X9-yeY">
+                    <navigationItem key="navigationItem" title="New Med" id="Dyw-X9-yeY">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ct9-9L-08v">
                             <color key="tintColor" systemColor="systemPurpleColor"/>
                             <connections>
@@ -232,7 +238,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Save Medication" id="oDq-h0-GUo">
                             <color key="tintColor" systemColor="systemPurpleColor"/>
                             <connections>
-                                <action selector="saveNewMed:" destination="mn7-hk-ujw" id="61A-7b-cpu"/>
+                                <action selector="save:" destination="mn7-hk-ujw" id="VVY-2q-iU7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -253,7 +259,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <segue destination="t4e-pA-Tdq" kind="showDetail" identifier="loggedIn" id="csC-J9-7MN"/>
+                        <segue destination="t4e-pA-Tdq" kind="presentation" identifier="loggedIn" id="csC-J9-7MN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oUk-w4-zPV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
