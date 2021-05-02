@@ -1,0 +1,12 @@
+- How much do you think you learned throughout the project? List at least 2 concrete examples
+
+I thought I learned a lot throughout the project. It was mostly putting together a lot of different things that was learned throughout the semester in class, 
+but it was still very fun for me. One thing I learned and implemented into my project was using Firebase for User Authentication and to have different users. 
+Related to this, although we mentioned it, we didn't go over it in class really, was data persistence and storing all of the user data in Firebase and the reading 
+it back for each individual user. Something else I used that I learned were UIPickers (I used multiple different cases of these), which were quite interesting
+
+- What class material do you review? List at least 2 concrete examples
+One piece of class material that I used was tableviews, as a I had multiple tableviews in my project. I also incorporated many small things that we went over in class such 
+as the implementation of a search bar, segues, and using delegates to pass information between different views. 
+- Do you plan on continuing to work on this project?
+Yes, I want to make this project better and have a few more functionalities than it currently has. 
